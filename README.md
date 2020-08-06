@@ -1,11 +1,12 @@
 ### CREATING A DATABSE
-
+***
 ```
 CREATE database workotest;
 ```
 <br/>
 
 ### CREATING A TABLE 
+***
 ```
 create table employee (emp_id int , emp_name VARCHAR(225) , dep_id int);
 create table department (dep_id int , dep_name VARCHAR(225) , loc_id int);
@@ -14,7 +15,7 @@ create table location (loc_id int , loc_name VARCHAR(225));
 <br/>
 
 ### Inserting Values
-
+***
 ##### FOR EMPLOYEE TABLE
 ```
 INSERT into employee values(16, "Parvish", 016);
@@ -44,7 +45,8 @@ INSERT into location values(03, "Maninagar");
 ```
 <br/>
 
-### GROUP BY 
+### GROUP BY
+***
 ```
 SELECT dep_id, count(*)
 FROM employee
@@ -52,7 +54,8 @@ GROUP BY dep_id;
 ```
 <br/>
 
-### SORTING 
+### SORTING
+***
 ```
 Select * from employee order by emp_name;
 ```
@@ -82,47 +85,55 @@ inner JOIN employee ON employee.dep_id=department.dep_id;
 ```
 
 ### WHERE
+***
 ``` 
 SELECT * FROM employee where dep_id = 018;
 ```
 
 ### WILDCARD
+***
 ```
 SELECT * FROM employee
 WHERE emp_name LIKE '%r%';
 ```
 
 ### NOT IN 
+***
 ```
 SELECT * FROM employee
 WHERE dep_id NOT IN (16, 7);
 ```
 
 # IN
+***
 ```
 SELECT * FROM employee
 WHERE dep_id IN (16, 7);
 ```
 
 # BETWEEN
+***
 ```
 SELECT * FROM employee
 WHERE emp_id BETWEEN 18 AND 22;
 ```
 
 # ALIAS
+***
 ```
 SELECT emp_id AS ID, emp_name AS name
 FROM employee;
 ```
 
 # AND
+***
 ```
 SELECT * FROM employee
 WHERE dep_id=07 AND emp_id=18;
 ```
 
 # OR
+***
 ```
 SELECT * FROM employee
 WHERE dep_id=07 OR emp_id=18;
