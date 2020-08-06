@@ -132,7 +132,7 @@ SELECT * FROM employee
 WHERE dep_id=07 AND emp_id=18;
 ```
 
-# OR
+### OR
 ***
 ```
 SELECT * FROM employee
