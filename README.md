@@ -104,28 +104,28 @@ SELECT * FROM employee
 WHERE dep_id NOT IN (16, 7);
 ```
 
-# IN
+### IN
 ***
 ```
 SELECT * FROM employee
 WHERE dep_id IN (16, 7);
 ```
 
-# BETWEEN
+### BETWEEN
 ***
 ```
 SELECT * FROM employee
 WHERE emp_id BETWEEN 18 AND 22;
 ```
 
-# ALIAS
+### ALIAS
 ***
 ```
 SELECT emp_id AS ID, emp_name AS name
 FROM employee;
 ```
 
-# AND
+### AND
 ***
 ```
 SELECT * FROM employee
