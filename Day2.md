@@ -68,4 +68,37 @@ ALTER TABLE employee ADD entrytime datetime
 select *from employee where entrytime >= date_sub(now(),interval 3 minute);
 ```
 
+#### Created a table for skills (Skill_id and skill_name) and skill_emp (emp_id and skill_id)
+***
+```
+CREATE table skill_emp (emp_id INT, skill_id INT);
+CREATE table skills (skill_id INT, skill_name VARCHAR(225));
+```
 
+<br/>
+
+#### Employee name  with a specific skills like Python 
+***
+```
+SELECT employee.emp_id, employee.emp_name, skills.skill_name
+FROM employee
+LEFT JOIN skill_emp ON employee.emp_id=skill_emp.emp_id
+LEFT JOIN skills ON skills.skill_id=skill_emp.skill_id
+WHERE skill_name="Python";
+```
+
+<br/>
+
+#### All the detail of employee whose skill is python
+***
+```
+SELECT employee.emp_id, employee.emp_name, department.dep_name,location.loc_name, skills.skill_name
+FROM employee
+LEFT JOIN department ON employee.dep_id=department.dep_id
+LEFT JOIN location ON location.loc_id=department.loc_id
+LEFT JOIN skill_emp ON skill_emp.emp_id=employee.emp_id
+LEFT JOIN skills ON skills.skill_id=skill_emp.skill_id
+Where skill_name = "Python";
+```
+
+<br/>
