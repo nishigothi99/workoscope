@@ -11,9 +11,9 @@ SELECT *,EXTRACT(YEAR FROM from_unixtime(epoch)) FROM workotest.mytable;
 ```
 
 <br/>
-#### Learn about composite unique key..
-***
 
+#### Learn about composite unique key
+***
 ```
 use workotest;
 ALTER TABLE skill_emp ADD UNIQUE (`emp_id`, `skill_id`);
