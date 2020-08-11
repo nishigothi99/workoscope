@@ -40,3 +40,10 @@ where firstname like '%ja%' or lastname like '%ja%' or email like '%ja%';
 
 <br/>
 
+#### Combine primary key
+***
+```
+ALTER TABLE table_name PRIMARY KEY (P_Id , LastName)
+```
+
+<br/>
