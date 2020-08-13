@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>My Form</title>
+
+	<style>
+		legend{
+			text-align: center;
+			font-size: 2em;
+			margin-right: 20px;
+		}
+		fieldset{
+			background-color: #ababab
+		}
+		mark{
+			background-color: #ffffff
+		}
+		.container {
+		 padding-right: 175px;
+ 		 padding-left: 175px;
+ 		 margin-right: auto;
+ 		 margin-left: auto;
+ 		 line-height: 1.9em;
+
+}
+	</style>
+
+</head>
+<body class="container" >
+	<form id="form" name="form">
+
+		<fieldset>
+		<legend><b><mark>Registration Form</mark></b></legend> 
+		<form name="myForm" >
+  			
+  			First Name: <input type="text" pattern="[A-Za-z ]{1,32}" placeholder="Enter Your FirstName" id="fname" name="fname" required><br>
+  			
+  			Last Name : <input type="text" pattern="[A-Za-z ]{1,32}" placeholder="Enter Your LastName" id="lname" name="lname" required><br>
+  			
+  			Date of Birth: <input type="date" id="dob" name="dob" required><br>
+  			
+  			Gender: 	
+  			<input type="radio" id="male" name="gender" value="male" required>Male
+  			<input type="radio" id="female" name="gender" value="female">Female<br>
+  			
+  			Phone Number: <input type="text" pattern="[0-9]{10}" placeholder="Enter Your Number" id="phoneno" name="phoneno" required><br>
+  			
+  			Email ID: <input type="email" placeholder="Enter Your Email" name="email" required><br>
+  			
+  			Address:<br><textarea name="address" placeholder="Enter your Address" rows="5" cols="35" required></textarea><br>
+  			
+  			City:	<select id="city" name="city" required>
+  						<option value="Ahmedabad">Ahmedabad</option>
+  						<option value="Gandhinagar">Gandhinagar</option>
+  						<option value="Vadodra">Vadodra</option>
+  						<option value="Rajkot">Rajkot</option>
+  						<option value="Jamnagar">Jamnagar</option>
+					</select><br>
+  			
+  			State:	<select id="state" name="state" required>
+  						<option value="Gujarat">Gujarat</option>
+  						<option value="Delhi">Delhi</option>
+  						<option value="Rajasthan">Rajasthan</option>
+  						<option value="Mahrastra">Mahrastra</option>
+  						<option value="Madhya Pradesh">Madhya Pradesh</option>
+					</select><br>
+
+  			Country:<select id="country" name="country" required>
+  						<option value="India">India</option>
+  						<option value="Nepal">Nepal</option>
+  						<option value="Sri Lanka">Canada</option>
+  						<option value="Sri Lanka">USA</option>
+  						<option value="Sri Lanka">Australia</option>
+  					</select><br>
+  			
+  			<input type="submit" value="Submit">
+		
+		</form>
+		</fieldset>
+		<script>
+			document.getElementById("form").addEventListener("submit", myFunction);
+
+			function myFunction() 
+			{
+				event.preventDefault()
+				var fname = document.forms["form"]["fname"].value;
+				var lname = document.forms["form"]["lname"].value;
+				var dob = document.forms["form"]["dob"].value;
+				var gender = document.forms["form"]["gender"].value;
+				var phone = document.forms["form"]["phoneno"].value;
+				var email = document.forms["form"]["email"].value;
+  				// alert("The form was submitted by \n FirstName: " + fname + "\nLastName: "+lname+"\n Date of Birth: "+dob+"\n Gender: "+gender);
+  				document.getElementById("md").innerHTML="The form was submitted by <br/> FirstName: " + fname + "<br/>LastName: "+lname+"<br/>Date of Birth: "+dob+"<br/>Gender: "+gender+ "<br/>Phone: "+phone+"<br/>Email: "+email;
+			}
+
+		</script>
+
+		<h3 id="md"></h3>
+	</form>
+</body>
+</html>
