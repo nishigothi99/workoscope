@@ -1,4 +1,65 @@
-const mysql = require('mysql');
+
+var mysql = require('mysql');
+ 
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'workotest',
+    multipleStatements: true
+});
+connection.connect();
+var obj={
+  "emp_id" : 27,
+  "fname" :"Dhruvi",
+   "lname" : "Patel",
+   "email" : "dhruvip99@gmail.com",
+   "dep_id": 19,
+   "entrytime" : "now()"
+}
+var objDep = {
+  "dep_name" : "Java",
+  "loc_id" : 5,
+  "loc_name" : "Vejalpur"
+}
+var objSkills={
+  "skill_id": 13,
+}
+ 
+connection.query(`INSERT into location values(${objDep.loc_id},'${objDep.loc_name}')`, function(err, fields) {
+    if(err) {
+      return console.log("Error detected"+err);
+    }
+    // console.log(results[1]);
+});
+
+
+connection.query(`INSERT into department values(${obj.dep_id},'${objDep.dep_name}',${objDep.loc_id})`, function(err, fields) {
+    if(err) {
+      return console.log("Error detected"+err);
+    }
+    // console.log(results[1]);
+});
+ 
+connection.query(`INSERT into employee values(${obj.emp_id},'${obj.fname}','${obj.lname}','${obj.email}',${obj.dep_id},${obj.entrytime})`, function(err, fields) {
+    if(err) {
+      return console.log("Error detected"+err);
+    }
+    // console.log(results[1]);
+});
+
+
+connection.query(`INSERT into skill_emp values(${obj.emp_id},'${objSkills.skill_id}')`, function(err, fields) {
+    if(err) {
+      return console.log("Error detected"+err);
+    }
+    // console.log(results[1]);
+});
+ 
+connection.end();
+
+
+/*const mysql = require('mysql');
 const moment = require('moment');
 
 const connection = mysql.createConnection({ 
@@ -37,3 +98,4 @@ connection.query('SELECT emp_id, firstname ,lastname, dep_id FROM employee', (er
 // moment
 // search query 
 // skill, name, last , email.
+*/
