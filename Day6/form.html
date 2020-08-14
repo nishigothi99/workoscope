@@ -47,7 +47,33 @@
         Email ID: <input type="email" placeholder="Enter Your Email" name="email" required><br>
         
         Address:<br><textarea name="address" placeholder="Enter your Address" rows="5" cols="35" required></textarea><br>
-        
+        <div id = "check">
+Skills:
+                <input type="checkbox" id="Python" value="Python">Python
+                <input type="checkbox" id="C" value="C">C
+                <input type="checkbox" id="C++" value="C++">C++
+                <input type="checkbox" id="JAVA" value="JAVA">JAVA
+                <input type="checkbox" id="R" value="R">R
+
+                <input type="checkbox" id="Ruby" value="Ruby">Ruby
+                <input type="checkbox" id="Github" value="Github">Github
+                <input type="checkbox" id="Scala" value="Scala">Scala
+                <input type="checkbox" id="HTML" value="HTML">HTML
+                <input type="checkbox" id="CSS" value="CSS">CSS
+
+                <input type="checkbox" id="Javascript" value="Javascript">Javascript
+                <input type="checkbox" id="React" value="React">React
+                <input type="checkbox" id="IBM Cloud" value="IBM Cloud">IBM Cloud
+                <input type="checkbox" id="DBMS" value="DBMS">DBMS
+                <input type="checkbox" id="MySql" value="MySql">MySql
+
+                <input type="checkbox" id="Linux" value="Linux">Linux
+                <input type="checkbox" id="Management" value="Management">Management
+                <input type="checkbox" id="Marketing" value="Marketing">Marketing
+                <input type="checkbox" id="GO" value="GO">GO
+                <input type="checkbox" id="Django" value="Django">Django<br/>
+</div>
+
         City: <select id="city" name="city" required>
               <option value="Ahmedabad">Ahmedabad</option>
               <option value="Gandhinagar">Gandhinagar</option>
@@ -72,7 +98,7 @@
               <option value="Sri Lanka">Australia</option>
             </select><br>
         
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="submit">
     
     </form>
     </fieldset>
@@ -92,6 +118,7 @@
           // alert("The form was submitted by \n FirstName: " + fname + "\nLastName: "+lname+"\n Date of Birth: "+dob+"\n Gender: "+gender);
           // document.getElementById("md").innerHTML="The form was submitted by <br/> FirstName: " + fname + "<br/>LastName: "+lname+"<br/>Date of Birth: "+dob+"<br/>Gender: "+gender+ "<br/>Phone: "+phone+"<br/>Email: "+email;*/
 
+
         var myForm = document.getElementById('form');
         myForm.addEventListener('submit', function(event){
           event.preventDefault();
@@ -108,6 +135,12 @@
           document.getElementById("md").innerHTML=result1;
         });
       
+      document.getElementById('submit').onclick = function() {
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      for (var checkbox of checkboxes) {
+        document.body.append(checkbox.value + ' ');
+  }
+}
 
     </script>
 
