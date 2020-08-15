@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 var obj={
-  "fname" :"Harshil",
+  "fname" :"Harsh",
 }
 
 var objSkills={
@@ -49,26 +49,26 @@ connection.query(`INSERT into mytable (fname) values('${obj.fname}')`, function(
     if(err) {
       return console.log("Error detected"+err);
     }
-    // console.log(results[1]);
+    const v=fields["insertId"];
+    newq(v)
 });
 
-connection.query(`SELECT * FROM mytable WHERE fname = "${obj.fname}" `,function(err,rows){
-  if(err){
-    return console.log("Error detected"+err);
-  }
-  // console.log(rows)
-  const r = rows[0]["ID"]
-  newq(r)
-});
-function newq(r){
-  connection.query(`Insert into mytable_skill values (${r},${objSkills.skill_id})`, function(err, fields) {
+// connection.query(`SELECT * FROM mytable WHERE fname = "${obj.fname}" `,function(err,rows){
+//   if(err){
+//     return console.log("Error detected"+err);
+//   }
+//   console.log(rows)
+//   const r = rows[0]["ID"]
+//   newq(r)
+// });
+function newq(v){
+  connection.query(`Insert into mytable_skill values (${v},${objSkills.skill_id})`, function(err, fields) {
     if(err) {
       return console.log("Error detected"+err);
     }
 
     // console.log(results[1]);
-})
-
+});
 
 }
 
