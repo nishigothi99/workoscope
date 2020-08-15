@@ -30,7 +30,7 @@
 
     <fieldset>
     <legend><b><mark>Registration Form</mark></b></legend> 
-    <form name="myForm" >
+  
         
         First Name: <input type="text" pattern="[A-Za-z ]{1,32}" placeholder="Enter Your FirstName" id="fname" name="fname" required><br>
         
@@ -100,10 +100,11 @@ Skills:
         
         <input type="submit" value="Submit" id="submit">
     
-    </form>
+
     </fieldset>
-    <script>
+   <script>
       /*document.getElementById("form").addEventListener("submit", myFunction);
+
       function myFunction() 
       {
         console.log(event);
@@ -133,17 +134,50 @@ Skills:
           console.log(result);
           document.getElementById("md").innerHTML=result1;
         });
-      
-      document.getElementById('submit').onclick = function() {
-      var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+
+      var myForm = document.getElementById('form');
+        myForm.addEventListener('submit', function(event){
+          event.preventDefault();
+          result=[]
+     var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
       for (var checkbox of checkboxes) {
-        document.body.append(checkbox.value + ' ');
-  }
-}
+        // document.body.append(checkbox.value + ' ');
+        result.push(checkbox.value)
+       }
+    // result=JSON.stringify(result);
+    document.getElementById("mmd").innerHTML=result;
+      console.log(result);
+})
 
     </script>
 
+
     <p id="md"></p>
+    <p id="mmd"></p>
   </form>
 </body>
 </html>
+<!-- 
+/*
+      var myForm = document.getElementById('form');
+        myForm.addEventListener('submit', function(event)
+        {
+          event.preventDefault();
+          result=[]
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+          
+           for (var checkbox of checkboxes) 
+           {
+          // // document.body.append(checkbox.value + ' ');
+           result = result.push(checkbox.value)
+          // var result = Object.keys(checkboxes).map((key,item) => {
+          //   return item[key];
+          // });
+           }
+          result=JSON.stringify(checkboxes);
+          document.getElementById("md").innerHTML=result;
+          // console.log(checkboxes[0][id]);
+          console.log(result)
+        })
+*/ -->
