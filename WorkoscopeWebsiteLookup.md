@@ -27,15 +27,15 @@
 * Chats
 * Notification 
 * ME:
-``` diff
-- sometimes ME tab is not opening 
-```
-	* Help
-``` diff
-- My Area is not working
-```
+	* Help 
 	* Edit profile
 	* settings 
+``` diff
+- sometimes ME tab is not opening 
+```	
+``` diff
+- My Area in Help is not working
+```
 * Explore Tab:
 ``` diff
 - Portfolio and loop both butoons takes to "Explore"
