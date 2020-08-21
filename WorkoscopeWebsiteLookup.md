@@ -14,7 +14,7 @@
 	* For the new USER, first time a Popup screen with "Things you should now"
 * Home Page:
 ```diff
-- Sometimes Explore button is not there  
+- Sometimes Explore button is not visible  
 - Search Skill tab is not working
 ```
 * Explore Page:
