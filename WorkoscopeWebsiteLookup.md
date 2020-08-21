@@ -15,13 +15,22 @@
 ***
 ### For the JOB Poster
 ***
-Job poster needs to select the Job Title, Budget, Services, Skills, Job Decription. In Job Description there are many formatting options available. They can also attach the document if they want and after submitting all this details and postting the Job, they will be notifying that "Job is successfully Posted" <br/>
-
-If any candiate apply for the job then it shows the alert [You have a new alert]
+* Job poster needs to select the following things:
+	* Job Title
+	* Budget
+	* Services
+	* Skills
+	* Job Decription (Many Formatting options available)
+	* Attach the document if they want(optional).
+* After submitting all this details and posting the Job, they will be notifying that "Job is successfully Posted"
+* If any candiate apply for the job then it shows the alert [You have a new alert]
 
 ### User's Side 
 ***
-If the candiate wants to apply for a Job its first ask if he/she wants to alter the budget or the delivery time and along with this he/she needs to write the description why he is suitable for the same along with the candiate has the option that if he wants to add any other portfolio which won't be seen by other network and than apply <br/>
+* If the candiate wants to apply for a Job its first ask
+	* Wants to alter the budget or the delivery time (optional)
+	* Needs to write the description why he is suitable for the same 
+	* Attach some other portfolio which wont be seen by network 
 
 ### Issues 
 ***
