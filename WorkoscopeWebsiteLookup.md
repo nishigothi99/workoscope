@@ -26,9 +26,16 @@
 * Connection 
 * Chats
 * Notification 
+* ME:
 ``` diff
-- ME tab is not opening 
+- sometimes ME tab is not opening 
 ```
+	* Help
+``` diff
+- My Area is not working
+```
+	* Edit profile
+	* settings 
 * Explore Tab:
 ``` diff
 - Portfolio and loop both butoons takes to "Explore"
