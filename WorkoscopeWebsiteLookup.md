@@ -25,5 +25,6 @@ If the candiate wants to apply for a Job its first ask if he/she wants to alter 
 
 ### Issues 
 ***
-When the user is applying for the job the loader doesn't stop
+When the user is applying for the job the loader doesn't stop <br/>
+
 For the JOB Poster: if any user applied for the job, than the job poster is not able to send message
