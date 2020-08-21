@@ -1,6 +1,7 @@
 ## Workoscope Website Lookup
 ***
-<br/>
+<br/> 
+
 * Signup Page 
 * OTP [Mail] 
 * Welcome pages:
@@ -11,5 +12,27 @@
 	* Vage per hour/ Service provide/ skills(Minimum 6 skills)
 * Starting Page:
 	* For the new USER, first time a Popup screen with "Things you should now"
-
+* Home Page:
+```diff
+- Sometimes Explore button is not there  
+- Search Skill tab is not working
+```
+* Explore Page:
+```diff
+- Video is not auto playing 
+```
+* Hashtags
+* Jobs
+* Connect Suggestion
+* Connection 
+* Chats
+* Notification 
+``` diff
+- ME tab is not opening 
+```
+* Explore Tab:
+``` diff
+- Portfolio and loop both butoons takes to "Explore"
+```
+* Create Job
 
