@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script >
+
+var queryString = "https://example.com/?&product=shirt&color=blue&newuser&size=m";
+// const queryString = window.location.search;
+
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+
+const product = urlParams.get('product')
+console.log(product);
+// shirt
+
+const color = urlParams.get('color')
+console.log(color);
+// blue
+
+const newUser = urlParams.get('newuser')
+console.log(newUser);
+// empty string
+
+
+</script>
