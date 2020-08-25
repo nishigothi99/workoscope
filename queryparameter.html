@@ -11,7 +11,7 @@
 
 <script >
 
-var queryString = "https://example.com/?&product=shirt&color=blue&newuser&size=m";
+var queryString = "https://example.com/?product=shirt&color=blue&newuser&size=m";
 // const queryString = window.location.search;
 
 // console.log(queryString);
@@ -29,18 +29,29 @@ const urlParams = new URLSearchParams(queryString);
 // console.log(newUser);
 // // empty string
 
-const keys = urlParams.keys();
-const values = urlParams.values();
-const  entries = urlParams.entries();
+// const keys = urlParams.keys();
+// const values = urlParams.values();
+// const  entries = urlParams.entries();
 
-for (const key of keys) console.log(key);
-// product, color, newuser, size
+// for (const key of keys) console.log(key);
+// // product, color, newuser, size
 
-for (const value of values) console.log(value);
-// shirt, blue, , m
+// for (const value of values) console.log(value);
+// // shirt, blue, , m
 
-for(const entry of entries) {
-  console.log(`${entry[0]}: ${entry[1]}`);
-}
+// for(const entry of entries) {
+//   console.log(`${entry[0]}: ${entry[1]}`);
+// }
+
+urlp=[];
+s=queryString.toString().split('?');
+s=s[1].split('&');
+for(i=0;i<s.length;i++)
+	{
+		u=s[i].split('=');
+		urlp[u[0]]=u[1];
+	}
+	console.log(urlp)
+alert(urlp['product'])
 
 </script>
