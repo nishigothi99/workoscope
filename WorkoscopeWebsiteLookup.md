@@ -37,3 +37,17 @@
 When the user is applying for the job the loader doesn't stop <br/>
 
 For the JOB Poster: if any user applied for the job, than the job poster is not able to send message
+
+
+## Chats
+***
+* When the user want to chat : 
+* first step is to click on chat available on header.
+* For the first time the user need to search the username to whom he/she want to chat [User can chat with his connections only]
+* Two options are available to compose a message to whom you are chatting for the first time : 1) The edit button 2) Compose button
+* If the user want to chat to a person whom he/she has chat previously than can click on the name from the chat tab.
+* User can send the message or attachments or custom job offer or can do video calling.
+* user will also be notified with mail that their is an unread message.
+
+### Issue
+* Video calling - Delayed video  
